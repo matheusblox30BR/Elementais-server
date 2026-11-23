@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: elementais-3d
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeploy: true          # publica de novo a cada commit no GitHub
+    envVars:
+      - key: NODE_VERSION
+        value: 20
